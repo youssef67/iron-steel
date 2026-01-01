@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Iron Steel
+
+Site vitrine pour une entreprise familiale de métallerie artisanale basée en Alsace.
+
+## Stack Technique
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Email**: Resend
+- **Hosting**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prérequis
+
+- Node.js 18+
+- pnpm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Installer les dépendances
+pnpm install
+
+# Copier le fichier d'environnement
+cp .env.example .env.local
+
+# Configurer les variables d'environnement dans .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Développement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Commande         | Description                          |
+| ---------------- | ------------------------------------ |
+| `pnpm dev`       | Serveur de développement (Turbopack) |
+| `pnpm build`     | Build de production                  |
+| `pnpm start`     | Serveur de production                |
+| `pnpm lint`      | Linting ESLint                       |
+| `pnpm lint:fix`  | Corriger les erreurs ESLint          |
+| `pnpm format`    | Formater avec Prettier               |
+| `pnpm typecheck` | Vérification TypeScript              |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure du Projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/              # Pages Next.js (App Router)
+├── components/
+│   ├── layout/       # Header, Footer
+│   └── ui/           # Composants UI réutilisables
+├── features/         # Modules fonctionnels
+├── lib/              # Utilitaires
+├── hooks/            # Hooks React globaux
+├── services/         # Appels API
+├── types/            # Types TypeScript
+└── styles/           # Styles globaux
+```
 
-## Deploy on Vercel
+## Design System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le design system est documenté dans:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `docs/design-system.md` — Tokens et composants
+- `context/design-principles.md` — Principes de design
+- `context/style-guide.md` — Guide de style
+
+### Couleurs
+
+- **Primary**: Gris métal `#4A4A4A`
+- **Accent**: Doré `#B8860B`
+
+### Typographie
+
+- **Font**: Poppins (400, 500, 600, 700)
+
+## Déploiement
+
+Le site est déployé automatiquement sur Vercel à chaque push sur `main`.
+
+```bash
+# Build de production
+pnpm build
+
+# Preview local
+pnpm start
+```
+
+## Variables d'Environnement
+
+| Variable         | Description                              |
+| ---------------- | ---------------------------------------- |
+| `RESEND_API_KEY` | Clé API Resend pour l'envoi d'emails     |
+| `CONTACT_EMAIL`  | Email de réception des demandes de devis |
+
+## License
+
+Propriétaire — Tous droits réservés.
