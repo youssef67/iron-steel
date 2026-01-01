@@ -9,16 +9,16 @@ Objectif principal: Générer des demandes de devis.
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js 14 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Email | Resend |
-| Hosting | Vercel |
-| Package Manager | pnpm |
+| Category        | Technology              |
+| --------------- | ----------------------- |
+| Framework       | Next.js 14 (App Router) |
+| Language        | TypeScript              |
+| Styling         | Tailwind CSS            |
+| Animations      | Framer Motion           |
+| Icons           | Lucide React            |
+| Email           | Resend                  |
+| Hosting         | Vercel                  |
+| Package Manager | pnpm                    |
 
 ---
 
@@ -53,17 +53,20 @@ iron-steel/
 ## Design System
 
 ### Colors
+
 - **Primary**: Gris métal `#4A4A4A`
 - **Accent**: Doré `#B8860B`
 - **Background**: `#FFFFFF`
 - **Surface**: `#F7F7F7`
 
 ### Typography
+
 - **Font**: Poppins (400, 500, 600, 700)
 - **Headings**: 600 weight
 - **Body**: 400 weight
 
 ### Style
+
 - Border radius: Medium (8-12px)
 - Shadows: Subtiles
 - Mode: Light uniquement
@@ -90,21 +93,25 @@ pnpm tsc --noEmit # Check TypeScript
 ## Conventions
 
 ### Naming
+
 - Components: PascalCase (`Button.tsx`)
 - Hooks: camelCase with `use` prefix (`useContact.ts`)
 - Utils: camelCase (`formatDate.ts`)
 - Types: PascalCase with descriptive names (`ServiceType.ts`)
 
 ### Imports
+
 - Use `@/` alias for src imports
 - Group: external → internal → types → styles
 
 ### Components
+
 - Functional components with TypeScript
 - Props interface defined above component
 - Export at bottom of file
 
 ### Commits
+
 - Conventional commits: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`
 - En français ou anglais, cohérent
 
@@ -155,6 +162,7 @@ RESEND_API_KEY=re_xxx
 ## SEO
 
 Chaque page doit avoir:
+
 - Titre unique et descriptif
 - Meta description (150-160 chars)
 - Open Graph tags

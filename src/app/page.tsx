@@ -2,16 +2,16 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-8">
+    <main className="flex min-h-screen flex-col items-center justify-center p-8">
       {/* Hero Section */}
-      <div className="text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-primary-900 mb-6">
+      <div className="mx-auto max-w-3xl text-center">
+        <h1 className="text-primary-900 mb-6 text-4xl font-semibold md:text-5xl lg:text-6xl">
           Iron Steel
         </h1>
-        <p className="text-xl md:text-2xl text-primary-500 mb-4">
+        <p className="text-primary-500 mb-4 text-xl md:text-2xl">
           Métallerie Artisanale en Alsace
         </p>
-        <p className="text-primary-400 mb-8 max-w-xl mx-auto">
+        <p className="text-primary-400 mx-auto mb-8 max-w-xl">
           Plus de 30 ans de savoir-faire familial au service de vos projets.
           Garde-corps, escaliers, portails, pergolas et plus encore.
         </p>
@@ -19,20 +19,20 @@ export default function Home() {
         {/* CTA Button */}
         <a
           href="/contact"
-          className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
+          className="bg-accent-500 hover:bg-accent-600 inline-flex items-center gap-2 rounded-lg px-6 py-3 font-medium text-white shadow-md transition-colors hover:shadow-lg"
         >
           Demander un devis gratuit
-          <ArrowRight className="w-5 h-5" />
+          <ArrowRight className="h-5 w-5" />
         </a>
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
-        <div className="bg-surface p-6 rounded-xl text-center">
-          <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+      <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="bg-surface rounded-xl p-6 text-center">
+          <div className="bg-accent-100 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
             <span className="text-accent-600 text-2xl">30+</span>
           </div>
-          <h3 className="font-semibold text-primary-800 mb-2">
+          <h3 className="text-primary-800 mb-2 font-semibold">
             Années d&apos;expertise
           </h3>
           <p className="text-primary-500 text-sm">
@@ -40,11 +40,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="bg-surface p-6 rounded-xl text-center">
-          <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="bg-surface rounded-xl p-6 text-center">
+          <div className="bg-accent-100 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
             <span className="text-accent-600 text-xl">FR</span>
           </div>
-          <h3 className="font-semibold text-primary-800 mb-2">
+          <h3 className="text-primary-800 mb-2 font-semibold">
             Fabrication française
           </h3>
           <p className="text-primary-500 text-sm">
@@ -52,11 +52,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="bg-surface p-6 rounded-xl text-center">
-          <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="bg-surface rounded-xl p-6 text-center">
+          <div className="bg-accent-100 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg">
             <span className="text-accent-600 text-xl">10</span>
           </div>
-          <h3 className="font-semibold text-primary-800 mb-2">
+          <h3 className="text-primary-800 mb-2 font-semibold">
             Garantie décennale
           </h3>
           <p className="text-primary-500 text-sm">
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       {/* Footer note */}
-      <p className="text-primary-300 text-sm mt-16">
+      <p className="text-primary-300 mt-16 text-sm">
         Site en construction — Bientôt disponible
       </p>
     </main>

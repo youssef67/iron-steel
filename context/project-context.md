@@ -10,11 +10,13 @@ Plus de 30 ans d'expertise dans la fabrication sur mesure.
 ## Utilisateurs Cibles
 
 ### Particuliers
+
 - Propriétaires cherchant des garde-corps, escaliers, portails
 - Projet de rénovation ou construction neuve
 - Sensibles à la qualité artisanale et au made in France
 
 ### Professionnels
+
 - Restaurants cherchant des cuisines inox
 - Entreprises industrielles (tuyauterie, structures)
 - Architectes et maîtres d'œuvre
@@ -24,12 +26,14 @@ Plus de 30 ans d'expertise dans la fabrication sur mesure.
 ## Voix de Marque
 
 ### Valeurs
+
 1. **Savoir-faire artisanal** — 30+ ans d'expertise familiale
 2. **Fabrication française** — Qualité et proximité
 3. **Éco-responsabilité** — Respect de l'environnement
 4. **Respect des normes** — Garantie décennale, certifications
 
 ### Ton
+
 - Professionnel mais accessible
 - Expert mais pas jargonneux
 - Chaleureux (entreprise familiale)
@@ -40,9 +44,11 @@ Plus de 30 ans d'expertise dans la fabrication sur mesure.
 ## Objectifs du Site
 
 ### Principal
+
 Générer des demandes de devis qualifiées
 
 ### Secondaires
+
 1. Présenter l'entreprise et ses valeurs
 2. Montrer le portfolio de réalisations
 3. Détailler les prestations offertes
