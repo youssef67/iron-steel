@@ -15,3 +15,4 @@ export {
   SectionTitle,
   SectionDescription,
 } from "./Section";
+export { ImageCarousel } from "./ImageCarousel";

@@ -1,12 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
-  Shield,
-  Award,
-  Leaf,
-  Wrench,
-  Building2,
-  ChefHat,
+  Clock,
+  Handshake,
+  Factory,
+  ShieldCheck,
 } from "lucide-react";
 import {
   Section,
@@ -18,63 +17,73 @@ import {
 
 const services = [
   {
-    icon: Shield,
     title: "Garde-corps",
     description:
       "Sécurité et esthétique pour vos balcons, terrasses et escaliers.",
-    href: "/prestations/garde-corps",
+    href: "/realisations#garde-corps",
+    image: "/images/realisations/garde-corps/Garde-corps-1.jpeg",
   },
   {
-    icon: Wrench,
     title: "Escaliers",
     description:
       "Escaliers sur mesure en métal, droits, hélicoïdaux ou à limon central.",
-    href: "/prestations/escaliers",
+    href: "/realisations#escaliers",
+    image: "/images/realisations/escaliers/Escalier.jpeg",
   },
   {
-    icon: Building2,
-    title: "Portails & Clôtures",
+    title: "Portails",
     description: "Portails battants ou coulissants, clôtures et grilles.",
-    href: "/prestations/portails",
+    href: "/realisations#portails",
+    image: "/images/realisations/portails/Porte-Portail-1.jpeg",
   },
   {
-    icon: Leaf,
-    title: "Pergolas",
+    title: "Charpente Métallique",
     description:
-      "Pergolas bioclimatiques et structures pour profiter de votre extérieur.",
-    href: "/prestations/pergolas",
+      "Charpentes, ossatures et structures métalliques pour tous vos projets.",
+    href: "/realisations#charpente-metallique",
+    image:
+      "/images/realisations/charpente-metallique/Charpente-métallique-1.jpeg",
   },
   {
-    icon: ChefHat,
-    title: "Cuisines Inox",
+    title: "Structures Spécifiques",
     description:
-      "Équipements professionnels inox pour restaurants et collectivités.",
-    href: "/prestations/cuisines-inox",
+      "Fabrications sur mesure et projets complexes selon vos besoins.",
+    href: "/realisations#structures-specifiques",
+    image:
+      "/images/realisations/structures-specifiques/structure-specfifique-1.jpeg",
   },
   {
-    icon: Award,
-    title: "Structures Métalliques",
+    title: "Tuyauterie & Chaudronnerie",
     description:
-      "Charpentes, passerelles et structures industrielles sur mesure.",
-    href: "/prestations/structures",
+      "Installations industrielles, tuyauterie et travaux de chaudronnerie.",
+    href: "/realisations#tuyauterie-chaudronnerie",
+    image:
+      "/images/realisations/tuyauterie-chaudronnerie/Tuyauterie_Chaudronnerie.jpeg",
   },
 ];
 
 const values = [
   {
-    number: "30+",
-    label: "Années d'expertise",
-    description: "Entreprise familiale depuis plus de trois décennies",
+    icon: Clock,
+    label: "30+ ans d'expérience",
+    description:
+      "Un savoir-faire familial éprouvé depuis plus de trois décennies",
   },
   {
-    number: "FR",
-    label: "Fabrication française",
-    description: "Qualité artisanale, proximité et réactivité",
+    icon: Handshake,
+    label: "Accompagnement complet",
+    description:
+      "De l'avant-projet à la réalisation, nous vous guidons à chaque étape",
   },
   {
-    number: "10",
-    label: "Garantie décennale",
-    description: "Travail certifié et assuré pour votre tranquillité",
+    icon: Factory,
+    label: "Fabriqué en Alsace",
+    description: "Des ouvrages créés sur mesure dans nos ateliers",
+  },
+  {
+    icon: ShieldCheck,
+    label: "Normes françaises",
+    description: "Respect des règles de l'art et des normes en vigueur",
   },
 ];
 
@@ -85,13 +94,21 @@ export default function Home() {
       <Section size="lg" className="from-primary-50 bg-gradient-to-b to-white">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-primary-900 mb-6 text-4xl font-semibold md:text-5xl lg:text-6xl">
-            Métallerie Artisanale
-            <span className="text-accent-500"> en Alsace</span>
+            Menuiserie Métallique
+            <span className="text-accent-500"> & Tuyauterie Industrielle</span>
           </h1>
-          <p className="text-primary-600 mx-auto mb-8 max-w-2xl text-lg md:text-xl">
-            Plus de 30 ans de savoir-faire familial au service de vos projets.
-            Garde-corps, escaliers, portails, pergolas et fabrications sur
-            mesure.
+          <p className="text-primary-600 mx-auto mb-6 max-w-3xl text-lg md:text-xl">
+            Iron & Steel est une entreprise familiale spécialisée dans les
+            travaux de menuiserie métallique et de tuyauterie industrielle.
+          </p>
+          <p className="text-primary-500 mx-auto mb-4 max-w-3xl">
+            Nous répondons à tous types de demandes en construction et structure
+            métallique, du plus simple au plus complexe, de la construction
+            ancienne aux projets les plus sophistiqués.
+          </p>
+          <p className="text-primary-500 mx-auto mb-8 max-w-3xl">
+            Secteurs privé et public, nos équipes interviennent sur tout le
+            territoire national et frontalier.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className={getButtonClasses("primary", "lg")}>
@@ -107,24 +124,30 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Values */}
-        <div className="mx-auto mt-20 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
-          {values.map((value) => (
-            <div
-              key={value.label}
-              className="rounded-xl bg-white p-6 text-center shadow-sm"
-            >
-              <div className="bg-accent-100 mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl">
-                <span className="text-accent-600 text-2xl font-semibold">
-                  {value.number}
-                </span>
-              </div>
-              <h3 className="text-primary-900 mb-2 font-semibold">
-                {value.label}
-              </h3>
-              <p className="text-primary-500 text-sm">{value.description}</p>
-            </div>
-          ))}
+        {/* Values - Option 1: Minimal Bold Typography */}
+        <div className="mx-auto mt-24 max-w-6xl">
+          <p className="text-accent-500 mb-12 text-center text-sm font-medium tracking-widest uppercase">
+            Iron & Steel c&apos;est
+          </p>
+          <div className="divide-primary-200 grid grid-cols-1 gap-0 divide-y sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+            {values.map((value) => {
+              const Icon = value.icon;
+              return (
+                <div
+                  key={value.label}
+                  className="group px-8 py-8 text-center transition-colors hover:bg-white sm:py-12"
+                >
+                  <Icon className="text-accent-500 mx-auto mb-5 h-10 w-10 stroke-[1.5]" />
+                  <h3 className="text-primary-900 mb-3 text-lg font-semibold">
+                    {value.label}
+                  </h3>
+                  <p className="text-primary-500 text-sm leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </Section>
 
@@ -139,56 +162,158 @@ export default function Home() {
         </SectionHeader>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <Link
-                key={service.title}
-                href={service.href}
-                className="group rounded-xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="bg-accent-100 group-hover:bg-accent-500 mb-4 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
-                  <Icon className="text-accent-600 h-6 w-6 transition-colors group-hover:text-white" />
-                </div>
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-lg"
+            >
+              {/* Image avec effet hover */}
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay au hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
+              {/* Contenu texte */}
+              <div className="p-6">
                 <h3 className="text-primary-900 mb-2 text-lg font-semibold">
                   {service.title}
                 </h3>
                 <p className="text-primary-500 text-sm leading-relaxed">
                   {service.description}
                 </p>
-                <span className="text-accent-600 group-hover:text-accent-700 mt-4 inline-flex items-center text-sm font-medium">
+                <span className="text-accent-500 group-hover:text-accent-600 mt-4 inline-flex items-center text-sm font-medium">
                   En savoir plus
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
-              </Link>
-            );
-          })}
+              </div>
+            </Link>
+          ))}
         </div>
 
         <div className="mt-12 text-center">
           <Link
-            href="/prestations"
+            href="/realisations"
             className={getButtonClasses("secondary", "md")}
           >
-            Toutes nos prestations
+            Toutes nos réalisations
           </Link>
         </div>
       </Section>
 
+      {/* Zone d'intervention Section */}
+      <Section>
+        <div className="mx-auto max-w-6xl">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Content */}
+            <div>
+              <p className="text-accent-500 mb-4 text-sm font-medium tracking-widest uppercase">
+                Zone d&apos;intervention
+              </p>
+              <h2 className="text-primary-900 mb-6 text-3xl font-semibold md:text-4xl">
+                Nous intervenons
+                <span className="text-accent-500"> partout</span>
+              </h2>
+              <p className="text-primary-600 text-lg leading-relaxed">
+                Basés en Alsace, nous nous déplaçons sur l&apos;ensemble du
+                territoire français ainsi que dans les pays frontaliers. Notre
+                équipe mobile est disponible pour étudier et réaliser votre
+                projet, où que vous soyez.
+              </p>
+            </div>
+
+            {/* Countries Grid */}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              {[
+                {
+                  country: "France",
+                  flag: "🇫🇷",
+                  description: "Tout le territoire",
+                },
+                {
+                  country: "Allemagne",
+                  flag: "🇩🇪",
+                  description: "Régions frontalières",
+                },
+                {
+                  country: "Suisse",
+                  flag: "🇨🇭",
+                  description: "Régions frontalières",
+                },
+                {
+                  country: "Belgique",
+                  flag: "🇧🇪",
+                  description: "Tout le pays",
+                },
+                {
+                  country: "Luxembourg",
+                  flag: "🇱🇺",
+                  description: "Tout le pays",
+                },
+                {
+                  country: "Et plus...",
+                  flag: "🌍",
+                  description: "Sur demande",
+                },
+              ].map((item) => (
+                <div
+                  key={item.country}
+                  className="bg-primary-50 hover:bg-accent-50 group rounded-xl p-5 text-center transition-colors"
+                >
+                  <span className="mb-2 block text-3xl">{item.flag}</span>
+                  <h3 className="text-primary-900 font-semibold">
+                    {item.country}
+                  </h3>
+                  <p className="text-primary-500 text-xs">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* CTA Section */}
-      <Section variant="accent">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-primary-900 mb-4 text-3xl font-semibold md:text-4xl">
-            Un projet en tête ?
-          </h2>
-          <p className="text-primary-600 mb-8 text-lg">
-            Contactez-nous pour un devis gratuit et personnalisé. Nous
-            intervenons sur toute la France et les pays frontaliers.
-          </p>
-          <Link href="/contact" className={getButtonClasses("primary", "lg")}>
-            Demander un devis gratuit
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      <Section>
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl">
+          <Image
+            src="/images/hero/cta-workshop.jpg"
+            alt="Atelier de métallerie"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="relative px-8 py-20 text-center text-white md:px-16 md:py-24">
+            <h2
+              className="mb-4 text-3xl font-semibold md:text-4xl"
+              style={{ color: "white" }}
+            >
+              Un projet en tête ?
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
+              Contactez-nous pour un devis gratuit et personnalisé. Nous
+              intervenons sur toute la France et les pays frontaliers.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/contact"
+                className={getButtonClasses("primary", "lg")}
+              >
+                Demander un devis gratuit
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <a
+                href="tel:+33647480182"
+                className="hover:text-primary-900 inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white"
+              >
+                06 47 48 01 82
+              </a>
+            </div>
+          </div>
         </div>
       </Section>
     </main>

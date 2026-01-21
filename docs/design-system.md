@@ -14,34 +14,34 @@ Site vitrine pour une entreprise de métallerie artisanale en Alsace.
 
 ## Palette de Couleurs
 
-### Primary (Gris Métal)
+### Primary (Gris)
 
 ```css
---primary-50: #f7f7f7; /* Backgrounds légers */
+--primary-50: #f8f8f8; /* Backgrounds légers */
 --primary-100: #e8e8e8;
---primary-200: #d1d1d1;
---primary-300: #b0b0b0;
---primary-400: #888888;
---primary-500: #4a4a4a; /* Couleur principale */
---primary-600: #3d3d3d;
---primary-700: #2f2f2f;
+--primary-200: #d4d4d4;
+--primary-300: #b3b3b3;
+--primary-400: #8a8a8a;
+--primary-500: #4b4b4b; /* Couleur principale */
+--primary-600: #3e3e3e;
+--primary-700: #303030;
 --primary-800: #1f1f1f;
---primary-900: #0f0f0f; /* Texte principal */
+--primary-900: #000000; /* Texte principal - Noir pur */
 ```
 
-### Accent (Doré)
+### Accent (Bleu)
 
 ```css
---accent-50: #fdf8f0;
---accent-100: #f9edd9;
---accent-200: #f0d9a8;
---accent-300: #e4c170;
---accent-400: #d4a84a;
---accent-500: #b8860b; /* Couleur principale */
---accent-600: #9a7009;
---accent-700: #7a5807;
---accent-800: #5c4205;
---accent-900: #3d2c04;
+--accent-50: #e9f6fb;
+--accent-100: #d3eef8;
+--accent-200: #a7ddf1;
+--accent-300: #7bccea;
+--accent-400: #4fbbe3;
+--accent-500: #27a6d9; /* Couleur principale */
+--accent-600: #1f8ab4;
+--accent-700: #186e8f;
+--accent-800: #12526a;
+--accent-900: #0b3645;
 ```
 
 ### Semantic
@@ -50,15 +50,15 @@ Site vitrine pour une entreprise de métallerie artisanale en Alsace.
 --success: #059669; /* Vert */
 --warning: #d97706; /* Orange */
 --error: #dc2626; /* Rouge */
---info: #2563eb; /* Bleu */
+--info: #27a6d9; /* Bleu (identique à accent) */
 ```
 
 ### Backgrounds
 
 ```css
 --bg-primary: #ffffff; /* Fond principal */
---bg-secondary: #f7f7f7; /* Sections alternées */
---bg-accent: #fdf8f0; /* Mise en avant doré */
+--bg-secondary: #f8f8f8; /* Sections alternées */
+--bg-accent: #e9f6fb; /* Mise en avant bleu */
 ```
 
 ---
@@ -147,7 +147,7 @@ font-family: "Poppins", system-ui, sans-serif;
 
 ### Boutons
 
-**Primary (Doré)**
+**Primary (Bleu)**
 
 ```css
 .btn-primary {
@@ -208,7 +208,7 @@ font-family: "Poppins", system-ui, sans-serif;
 .input:focus {
   border-color: var(--accent-500);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+  box-shadow: 0 0 0 3px rgba(39, 166, 217, 0.15);
 }
 ```
 
@@ -240,7 +240,7 @@ font-family: "Poppins", system-ui, sans-serif;
 
 ### ✅ Do's
 
-- Utiliser le doré pour les CTA et éléments d'action principaux
+- Utiliser le bleu pour les CTA et éléments d'action principaux
 - Maintenir une hiérarchie visuelle claire avec les tailles de police
 - Laisser respirer le contenu avec des marges généreuses
 - Utiliser des images de qualité pour valoriser le travail artisanal
@@ -248,7 +248,7 @@ font-family: "Poppins", system-ui, sans-serif;
 
 ### ❌ Don'ts
 
-- Ne pas surcharger avec trop d'éléments dorés
+- Ne pas surcharger avec trop d'éléments bleus
 - Ne pas utiliser de couleurs saturées en dehors de la palette
 - Ne pas réduire les espacements en mobile
 - Ne pas utiliser des photos de mauvaise qualité

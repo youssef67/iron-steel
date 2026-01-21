@@ -5,40 +5,40 @@
    ============================================ */
 
 :root {
-  /* Primary - Gris Métal */
-  --primary-50: #f7f7f7;
+  /* Primary - Gris */
+  --primary-50: #f8f8f8;
   --primary-100: #e8e8e8;
-  --primary-200: #d1d1d1;
-  --primary-300: #b0b0b0;
-  --primary-400: #888888;
-  --primary-500: #4a4a4a;
-  --primary-600: #3d3d3d;
-  --primary-700: #2f2f2f;
+  --primary-200: #d4d4d4;
+  --primary-300: #b3b3b3;
+  --primary-400: #8a8a8a;
+  --primary-500: #4b4b4b;
+  --primary-600: #3e3e3e;
+  --primary-700: #303030;
   --primary-800: #1f1f1f;
-  --primary-900: #0f0f0f;
+  --primary-900: #000000;
 
-  /* Accent - Doré */
-  --accent-50: #fdf8f0;
-  --accent-100: #f9edd9;
-  --accent-200: #f0d9a8;
-  --accent-300: #e4c170;
-  --accent-400: #d4a84a;
-  --accent-500: #b8860b;
-  --accent-600: #9a7009;
-  --accent-700: #7a5807;
-  --accent-800: #5c4205;
-  --accent-900: #3d2c04;
+  /* Accent - Bleu */
+  --accent-50: #e9f6fb;
+  --accent-100: #d3eef8;
+  --accent-200: #a7ddf1;
+  --accent-300: #7bccea;
+  --accent-400: #4fbbe3;
+  --accent-500: #27a6d9;
+  --accent-600: #1f8ab4;
+  --accent-700: #186e8f;
+  --accent-800: #12526a;
+  --accent-900: #0b3645;
 
   /* Semantic */
   --success: #059669;
   --warning: #d97706;
   --error: #dc2626;
-  --info: #2563eb;
+  --info: #27a6d9;
 
   /* Backgrounds */
   --background: #ffffff;
-  --foreground: #0f0f0f;
-  --surface: #f7f7f7;
+  --foreground: #000000;
+  --surface: #f8f8f8;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -128,8 +128,8 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: var(--accent-200);
-  color: var(--primary-900);
+  background-color: var(--accent-100);
+  color: var(--accent-900);
 }
 
 /* ============================================

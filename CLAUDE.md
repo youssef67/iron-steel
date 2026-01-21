@@ -54,10 +54,11 @@ iron-steel/
 
 ### Colors
 
-- **Primary**: Gris métal `#4A4A4A`
-- **Accent**: Doré `#B8860B`
+- **Primary**: Gris `#4B4B4B`
+- **Accent**: Bleu `#27A6D9`
+- **Text**: Noir `#000000`
 - **Background**: `#FFFFFF`
-- **Surface**: `#F7F7F7`
+- **Surface**: `#F8F8F8`
 
 ### Typography
 

@@ -2,18 +2,27 @@ import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const navigation = {
-  prestations: [
-    { name: "Garde-corps", href: "/prestations/garde-corps" },
-    { name: "Escaliers", href: "/prestations/escaliers" },
-    { name: "Portails", href: "/prestations/portails" },
-    { name: "Pergolas", href: "/prestations/pergolas" },
-    { name: "Cuisines inox", href: "/prestations/cuisines-inox" },
-    { name: "Structures métalliques", href: "/prestations/structures" },
+  realisations: [
+    { name: "Garde-corps", href: "/realisations#garde-corps" },
+    { name: "Escaliers", href: "/realisations#escaliers" },
+    { name: "Portails", href: "/realisations#portails" },
+    {
+      name: "Charpente métallique",
+      href: "/realisations#charpente-metallique",
+    },
+    {
+      name: "Structures spécifiques",
+      href: "/realisations#structures-specifiques",
+    },
+    {
+      name: "Tuyauterie & Chaudronnerie",
+      href: "/realisations#tuyauterie-chaudronnerie",
+    },
   ],
-  entreprise: [
-    { name: "À propos", href: "/a-propos" },
-    { name: "Nos réalisations", href: "/realisations" },
-    { name: "Zone d'intervention", href: "/zone-intervention" },
+  navigation: [
+    { name: "Accueil", href: "/" },
+    { name: "L'entreprise", href: "/a-propos" },
+    { name: "Réalisations", href: "/realisations" },
     { name: "Contact", href: "/contact" },
   ],
   legal: [
@@ -31,20 +40,18 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-semibold">
-              Iron<span className="text-accent-400">Steel</span>
+            <Link href="/" className="inline-block">
+              <span className="text-2xl font-semibold">
+                Iron<span className="text-accent-400">Steel</span>
+              </span>
             </Link>
-            <p className="text-primary-300 mt-4 text-sm leading-relaxed">
-              Métallerie artisanale en Alsace depuis plus de 30 ans. Fabrication
-              française, qualité et savoir-faire.
-            </p>
             <div className="mt-6 space-y-3">
               <a
-                href="tel:+33000000000"
+                href="tel:+33647480182"
                 className="text-primary-300 hover:text-accent-400 flex items-center gap-3 text-sm transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span>03 00 00 00 00</span>
+                <span>06 47 48 01 82</span>
               </a>
               <a
                 href="mailto:contact@ironsteel.fr"
@@ -56,21 +63,21 @@ export function Footer() {
               <p className="text-primary-300 flex items-start gap-3 text-sm">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 <span>
-                  123 Rue de la Métallerie
+                  31 route de Strasbourg
                   <br />
-                  67000 Strasbourg, France
+                  67610 La Wantzenau
                 </span>
               </p>
             </div>
           </div>
 
-          {/* Prestations */}
+          {/* Réalisations */}
           <div>
             <h3 className="mb-4 text-sm font-semibold tracking-wider uppercase">
-              Nos Prestations
+              Nos Réalisations
             </h3>
             <ul className="space-y-3">
-              {navigation.prestations.map((item) => (
+              {navigation.realisations.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -83,13 +90,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Entreprise */}
+          {/* Navigation */}
           <div>
             <h3 className="mb-4 text-sm font-semibold tracking-wider uppercase">
-              L&apos;Entreprise
+              Navigation
             </h3>
             <ul className="space-y-3">
-              {navigation.entreprise.map((item) => (
+              {navigation.navigation.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -114,7 +121,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="bg-accent-500 h-1.5 w-1.5 rounded-full" />
-                Fabrication française
+                Fabrication en Alsace
               </li>
               <li className="flex items-center gap-2">
                 <span className="bg-accent-500 h-1.5 w-1.5 rounded-full" />
@@ -122,11 +129,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <span className="bg-accent-500 h-1.5 w-1.5 rounded-full" />
-                Respect des normes
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="bg-accent-500 h-1.5 w-1.5 rounded-full" />
-                Éco-responsable
+                Normes françaises
               </li>
             </ul>
           </div>
@@ -135,7 +138,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-primary-800 mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
           <p className="text-primary-400 text-sm">
-            © {currentYear} Iron Steel. Tous droits réservés.
+            © {currentYear} Iron & Steel. Tous droits réservés.
           </p>
           <div className="flex gap-6">
             {navigation.legal.map((item) => (
