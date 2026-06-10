@@ -28,15 +28,15 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm">
-      <nav className="container-custom flex h-20 items-center justify-between">
+      <nav className="container-custom flex h-28 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/logo-iron-steel.svg"
             alt="Iron Steel"
-            width={120}
-            height={60}
-            className="h-16 w-auto"
+            width={200}
+            height={100}
+            className="h-24 w-auto"
             priority
           />
         </Link>
