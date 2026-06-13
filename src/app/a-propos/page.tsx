@@ -44,28 +44,28 @@ const values = [
 
 const timeline = [
   {
-    year: "1990",
+    year: "1996",
     title: "Les débuts",
     description:
       "Le père fonde l'entreprise avec une vision claire : allier tradition artisanale et exigence de qualité.",
   },
   {
-    year: "2000",
+    year: "2019",
     title: "La relève",
     description:
-      "Les premiers fils rejoignent l'aventure familiale, apportant nouvelles idées et énergie.",
+      "Les premiers fils rejoignent l'aventure familiale, apportant de nouvelles idées et énergie. Sous la supervision du père, création de la société Iron Steel.",
   },
   {
-    year: "2010",
+    year: "2022",
     title: "L'expansion",
     description:
-      "L'équipe s'agrandit avec l'arrivée des derniers fils. Iron & Steel devient une référence régionale.",
+      "L'équipe s'agrandit avec l'arrivée des deux derniers fils. Iron Steel est en pleine expansion.",
   },
   {
     year: "Aujourd'hui",
     title: "Une équipe soudée",
     description:
-      "Cinq artisans passionnés au service de vos projets, de l'Alsace à toute la France.",
+      "Une équipe variant entre 6 et 10 collaborateurs, passionnés au service de vos projets, de l'Alsace à toute la France.",
   },
 ];
 
@@ -207,8 +207,8 @@ export default function AProposPage() {
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl">
           {/* Background Image */}
           <Image
-            src="/images/hero/cta-workshop.jpg"
-            alt="Atelier de métallerie"
+            src="/images/realisations/charpente-metallique/Charpente-métallique-1.jpeg"
+            alt="Structure métallique Iron & Steel"
             fill
             className="object-cover"
           />
@@ -235,10 +235,10 @@ export default function AProposPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+33647480182"
+                href="tel:+33616323709"
                 className="hover:text-primary-900 inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white"
               >
-                06 47 48 01 82
+                06.16.32.37.09
               </a>
             </div>
           </div>

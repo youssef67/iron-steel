@@ -17,10 +17,10 @@ const realisations = [
     description:
       "Nos garde-corps allient sécurité et design pour sublimer vos espaces. Que ce soit pour un balcon, une terrasse, une mezzanine ou un escalier, nous concevons des solutions sur mesure adaptées à votre architecture.",
     features: [
-      "Garde-corps en inox brossé ou poli",
-      "Remplissage verre, câbles ou barreaudage",
-      "Finitions thermolaquées sur mesure",
-      "Conformes aux normes NF P01-012",
+      "Inox, acier, aluminium ou verre",
+      "Câble, tôle, barreaudage",
+      "Finition peint, thermolaqué, poli",
+      "Conforme aux normes NF P01-012",
     ],
     images: [
       "/images/realisations/garde-corps/Garde-corps-1.jpeg",
@@ -36,19 +36,19 @@ const realisations = [
     description:
       "Chaque escalier que nous créons est une pièce unique, pensée pour s'intégrer parfaitement à votre intérieur tout en répondant aux contraintes techniques de votre espace. Du design contemporain au style industriel, nous donnons vie à vos envies.",
     features: [
-      "Escaliers droits, quart-tournant, hélicoïdaux",
-      "Limon central ou double limon",
+      "Droit, tournant, hélicoïdal",
+      "Limon central, double limon",
       "Marches en métal, bois ou verre",
-      "Rampes et garde-corps assortis",
+      "Garde-corps sur mesure au choix",
     ],
     images: ["/images/realisations/escaliers/Escalier.jpeg"],
   },
   {
     id: "portails",
-    title: "Portails",
+    title: "Portail et Porte",
     subtitle: "La première impression",
     description:
-      "Le portail est la signature de votre propriété. Nous fabriquons des portails sur mesure, battants ou coulissants, qui conjuguent robustesse, sécurité et élégance. Chaque création est unique et reflète votre personnalité.",
+      "Le portail est la signature de votre propriété. Nous fabriquons des portails sur mesure, battants ou coulissants, qui conjuguent robustesse, sécurité et élégance. Chaque création est unique et reflète votre personnalité. Portes sur mesure anti-effraction, design personnalisé selon vos besoins.",
     features: [
       "Portails battants ou coulissants",
       "Motorisation intégrée possible",
@@ -66,7 +66,7 @@ const realisations = [
     title: "Charpente Métallique",
     subtitle: "La force de l'acier",
     description:
-      "Notre expertise en charpente métallique nous permet de réaliser des structures de toutes dimensions : hangars agricoles, bâtiments industriels, extensions ou ossatures pour maisons contemporaines. Solidité et durabilité garanties.",
+      "Notre expertise en charpente métallique nous permet de réaliser des structures de toutes dimensions : hangars agricoles, bâtiments industriels, extensions ou ossatures pour maisons contemporaines. Solidité et durabilité garanties. Nous disposons d'un bureau d'étude spécialisé en charpente métallique.",
     features: [
       "Études et calculs de structure",
       "Fabrication en atelier",
@@ -204,8 +204,8 @@ export default function RealisationsPage() {
       <Section>
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl">
           <Image
-            src="/images/hero/cta-workshop.jpg"
-            alt="Atelier Iron & Steel"
+            src="/images/realisations/charpente-metallique/Charpente-métallique-1.jpeg"
+            alt="Structure métallique Iron & Steel"
             fill
             className="object-cover"
           />
@@ -230,10 +230,10 @@ export default function RealisationsPage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+33647480182"
+                href="tel:+33616323709"
                 className="hover:text-primary-900 inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white"
               >
-                06 47 48 01 82
+                06.16.32.37.09
               </a>
             </div>
           </div>

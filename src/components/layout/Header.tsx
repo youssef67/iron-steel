@@ -28,15 +28,15 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-sm">
-      <nav className="container-custom flex h-28 items-center justify-between">
+      <nav className="container-custom flex h-32 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/logo-iron-steel.svg"
             alt="Iron Steel"
-            width={200}
-            height={100}
-            className="h-24 w-auto"
+            width={280}
+            height={140}
+            className="h-28 w-auto md:h-32"
             priority
           />
         </Link>
@@ -72,11 +72,11 @@ export function Header() {
         {/* CTA Desktop */}
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href="tel:+33647480182"
+            href="tel:+33616323709"
             className="text-primary-600 hover:text-accent-600 flex items-center gap-2 text-sm font-medium transition-colors"
           >
             <Phone className="h-4 w-4" />
-            <span>06 47 48 01 82</span>
+            <span>06.16.32.37.09</span>
           </a>
           <Link href="/contact" className={getButtonClasses("primary", "sm")}>
             Devis gratuit
@@ -126,11 +126,11 @@ export function Header() {
           })}
           <div className="border-primary-100 mt-4 border-t pt-4">
             <a
-              href="tel:+33647480182"
+              href="tel:+33616323709"
               className="text-primary-600 flex items-center gap-2 px-4 py-3 text-base font-medium"
             >
               <Phone className="h-5 w-5" />
-              <span>06 47 48 01 82</span>
+              <span>06.16.32.37.09</span>
             </a>
             <div className="px-4 pt-2">
               <Link

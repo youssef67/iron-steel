@@ -26,13 +26,13 @@ const services = [
   {
     title: "Escaliers",
     description:
-      "Escaliers sur mesure en métal, droits, hélicoïdaux ou à limon central.",
+      "Escalier à limon central, double limon, suspendu, intérieur et extérieur.",
     href: "/realisations#escaliers",
     image: "/images/realisations/escaliers/Escalier.jpeg",
   },
   {
-    title: "Portails",
-    description: "Portails battants ou coulissants, clôtures et grilles.",
+    title: "Portail et Porte",
+    description: "Simple, double battant, coulissant et autoportant.",
     href: "/realisations#portails",
     image: "/images/realisations/portails/Porte-Portail-1.jpeg",
   },
@@ -91,41 +91,58 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Section size="lg" className="from-primary-50 bg-gradient-to-b to-white">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-primary-900 mb-6 text-4xl font-semibold md:text-5xl lg:text-6xl">
-            Menuiserie Métallique
-            <span className="text-accent-500"> & Tuyauterie Industrielle</span>
-          </h1>
-          <p className="text-primary-600 mx-auto mb-6 max-w-3xl text-lg md:text-xl">
-            Iron & Steel est une entreprise familiale spécialisée dans les
-            travaux de menuiserie métallique et de tuyauterie industrielle.
-          </p>
-          <p className="text-primary-500 mx-auto mb-4 max-w-3xl">
-            Nous répondons à tous types de demandes en construction et structure
-            métallique, du plus simple au plus complexe, de la construction
-            ancienne aux projets les plus sophistiqués.
-          </p>
-          <p className="text-primary-500 mx-auto mb-8 max-w-3xl">
-            Secteurs privé et public, nos équipes interviennent sur tout le
-            territoire national et frontalier.
-          </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className={getButtonClasses("primary", "lg")}>
-              Demander un devis gratuit
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              href="/realisations"
-              className={getButtonClasses("secondary", "lg")}
-            >
-              Voir nos réalisations
-            </Link>
+      <section className="relative overflow-hidden">
+        {/* Background image - soudure / structure métallique */}
+        <Image
+          src="/images/hero/metalwork-family.jpg"
+          alt="Soudure sur structure métallique"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Overlay sombre pour la lisibilité */}
+        <div className="from-primary-900/90 to-primary-900/70 absolute inset-0 bg-gradient-to-b" />
+        <div className="container-custom relative py-24 md:py-32">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="mb-6 text-4xl font-semibold text-white md:text-5xl lg:text-6xl">
+              Structure Métallique
+              <span className="text-accent-400"> & Tuyauterie Industrielle</span>
+            </h1>
+            <p className="mx-auto mb-6 max-w-3xl text-lg text-white/90 md:text-xl">
+              Iron & Steel est une entreprise familiale spécialisée dans les
+              travaux de structure métallique et de tuyauterie industrielle.
+            </p>
+            <p className="mx-auto mb-4 max-w-3xl text-white/75">
+              Nous répondons à tous types de demandes en construction et
+              structure métallique, du plus simple au plus complexe, de la
+              construction ancienne aux projets les plus sophistiqués.
+            </p>
+            <p className="mx-auto mb-8 max-w-3xl text-white/75">
+              Secteurs privé et public, nos équipes interviennent sur tout le
+              territoire national et frontalier.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/contact"
+                className={getButtonClasses("primary", "lg")}
+              >
+                Demander un devis gratuit
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/realisations"
+                className="hover:text-primary-900 inline-flex h-13 items-center justify-center rounded-lg border-2 border-white px-8 text-lg font-medium text-white transition-colors hover:bg-white"
+              >
+                Voir nos réalisations
+              </Link>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Values - Option 1: Minimal Bold Typography */}
-        <div className="mx-auto mt-24 max-w-6xl">
+      {/* Values Section - Minimal Bold Typography */}
+      <Section size="lg">
+        <div className="mx-auto max-w-6xl">
           <p className="text-accent-500 mb-12 text-center text-sm font-medium tracking-widest uppercase">
             Iron & Steel c&apos;est
           </p>
@@ -135,7 +152,7 @@ export default function Home() {
               return (
                 <div
                   key={value.label}
-                  className="group px-8 py-8 text-center transition-colors hover:bg-white sm:py-12"
+                  className="group hover:bg-primary-50 px-8 py-8 text-center transition-colors sm:py-12"
                 >
                   <Icon className="text-accent-500 mx-auto mb-5 h-10 w-10 stroke-[1.5]" />
                   <h3 className="text-primary-900 mb-3 text-lg font-semibold">
@@ -281,8 +298,8 @@ export default function Home() {
       <Section>
         <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl">
           <Image
-            src="/images/hero/cta-workshop.jpg"
-            alt="Atelier de métallerie"
+            src="/images/realisations/charpente-metallique/Charpente-métallique-1.jpeg"
+            alt="Structure métallique Iron & Steel"
             fill
             className="object-cover"
           />
@@ -307,10 +324,10 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+33647480182"
+                href="tel:+33616323709"
                 className="hover:text-primary-900 inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white"
               >
-                06 47 48 01 82
+                06.16.32.37.09
               </a>
             </div>
           </div>

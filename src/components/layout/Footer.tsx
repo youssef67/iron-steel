@@ -1,11 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
+
+// Logos partenaires / labels (fichiers dans public/logo/).
+const partners = [
+  { name: "Région Alsace", src: "/logo/ALSACE.svg" },
+  { name: "Label Artisan MAAF", src: "/logo/Label-Artisan-MAAF.svg" },
+  { name: "Engagement écologique", src: "/logo/LOGO_ECO.svg" },
+];
 
 const navigation = {
   realisations: [
     { name: "Garde-corps", href: "/realisations#garde-corps" },
     { name: "Escaliers", href: "/realisations#escaliers" },
-    { name: "Portails", href: "/realisations#portails" },
+    { name: "Portail et Porte", href: "/realisations#portails" },
     {
       name: "Charpente métallique",
       href: "/realisations#charpente-metallique",
@@ -47,11 +55,11 @@ export function Footer() {
             </Link>
             <div className="mt-6 space-y-3">
               <a
-                href="tel:+33647480182"
+                href="tel:+33616323709"
                 className="text-primary-300 hover:text-accent-400 flex items-center gap-3 text-sm transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span>06 47 48 01 82</span>
+                <span>06.16.32.37.09</span>
               </a>
               <a
                 href="mailto:contact@ironsteel.fr"
@@ -132,6 +140,30 @@ export function Footer() {
                 Normes françaises
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Partenaires & labels */}
+        <div className="border-primary-800 mt-12 border-t pt-10">
+          <p className="text-primary-400 mb-6 text-center text-xs font-medium tracking-widest uppercase">
+            Nos labels & partenaires
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="flex h-20 w-32 items-center justify-center rounded-lg bg-white p-3"
+              >
+                <Image
+                  src={partner.src}
+                  alt={partner.name}
+                  width={120}
+                  height={64}
+                  unoptimized
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
