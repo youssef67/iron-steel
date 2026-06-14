@@ -17,11 +17,11 @@
 // ===== CONFIGURATION =========================================================
 const SMTP_HOST = 'smtp.hostinger.com';
 const SMTP_PORT = 465;          // 465 = SSL/TLS implicite (recommandé Hostinger)
-const SMTP_USER = 'contact@ironsteel.fr';        // ← boîte mail Hostinger
+const SMTP_USER = 'metallerie@ironsteel.fr';     // ← boîte mail Hostinger
 const SMTP_PASS = 'A_REMPLACER';                 // ← mot de passe de la boîte mail
-const MAIL_FROM = 'contact@ironsteel.fr';        // doit appartenir au domaine
+const MAIL_FROM = 'metallerie@ironsteel.fr';     // doit appartenir au domaine (= boîte authentifiée)
 const MAIL_FROM_NAME = 'Site Iron Steel';
-const MAIL_TO = 'contact@ironsteel.fr';          // destinataire des demandes
+const MAIL_TO = 'metallerie@ironsteel.fr';       // destinataire des demandes de devis
 // =============================================================================
 
 header('Content-Type: application/json; charset=utf-8');
