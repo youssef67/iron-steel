@@ -357,7 +357,7 @@ export default function ContactPage() {
                 </h2>
                 <div className="space-y-4">
                   <a
-                    href="tel:+33647480182"
+                    href="tel:+33616323709"
                     className="group flex items-start gap-4"
                   >
                     <div className="bg-accent-100 group-hover:bg-accent-200 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors">
@@ -366,7 +366,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-primary-900 font-medium">Téléphone</p>
                       <p className="text-accent-600 group-hover:text-accent-700">
-                        06 47 48 01 82
+                        06.16.32.37.09
                       </p>
                     </div>
                   </a>

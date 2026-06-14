@@ -40,7 +40,7 @@ export default function ConfidentialitePage() {
                   31 route de Strasbourg, 67610 La Wantzenau, France
                 </p>
                 <p className="text-primary-700 mb-2">
-                  Téléphone : 06 47 48 01 82
+                  Téléphone : 06.16.32.37.09
                 </p>
                 <p className="text-primary-700">Email : contact@ironsteel.fr</p>
               </div>
@@ -282,7 +282,7 @@ export default function ConfidentialitePage() {
                   <strong>Par email :</strong> contact@ironsteel.fr
                 </p>
                 <p className="text-primary-700 mb-2">
-                  <strong>Par téléphone :</strong> 06 47 48 01 82
+                  <strong>Par téléphone :</strong> 06.16.32.37.09
                 </p>
                 <p className="text-primary-700">
                   <strong>Par courrier :</strong> Iron & Steel, 31 route de

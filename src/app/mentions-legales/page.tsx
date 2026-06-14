@@ -59,7 +59,7 @@ export default function MentionsLegalesPage() {
                   </span>
                 </p>
                 <p className="text-primary-700 mb-2">
-                  <strong>Téléphone :</strong> 06 47 48 01 82
+                  <strong>Téléphone :</strong> 06.16.32.37.09
                 </p>
                 <p className="text-primary-700">
                   <strong>Email :</strong> contact@ironsteel.fr
