@@ -103,9 +103,9 @@ $telephoneEsc = $telephone !== '' ? $e($telephone) : '—';
 $adresseEsc = $adresse !== '' ? $e($adresse) : '—';
 $messageEsc = nl2br($e($message));
 
-// --- Email 1 : notification détaillée envoyée à l'entreprise ----------------
-$subjectBusiness = "[$motifLabel] $prenom $nom";
-$bodyBusiness = "
+// --- Notification détaillée envoyée à l'entreprise --------------------------
+$subject = "[$motifLabel] $prenom $nom";
+$bodyHtml = "
   <h2>Nouvelle demande depuis le site</h2>
   <p><strong>Motif :</strong> $motifEsc</p>
   <p><strong>Prestation(s) :</strong> $prestationsEsc</p>
@@ -119,26 +119,10 @@ $bodyBusiness = "
   <p>$messageEsc</p>
 ";
 
-// --- Email 2 : confirmation envoyée au visiteur -----------------------------
-$subjectVisitor = 'Votre demande a bien été reçue — Iron Steel';
-$bodyVisitor = "
-  <p>Bonjour $prenomEsc $nomEsc,</p>
-  <p>Nous avons bien reçu votre demande et nous vous remercions de votre confiance.
-     Notre équipe reviendra vers vous dans les plus brefs délais, généralement sous 24 à 48 heures.</p>
-  <p><strong>Récapitulatif de votre demande :</strong></p>
-  <p><strong>Motif :</strong> $motifEsc<br />
-     <strong>Prestation(s) :</strong> $prestationsEsc</p>
-  <p><strong>Votre message :</strong><br />$messageEsc</p>
-  <hr />
-  <p>Iron Steel — Métallerie générale<br />
-     31 route de Strasbourg, 67610 La Wantzenau<br />
-     Tél. : 06 47 48 01 82</p>
-  <p style=\"color:#888;font-size:12px\">Cet email de confirmation est automatique, merci de ne pas y répondre directement.</p>
-";
-
 // ===== ENVOI VIA SMTP ========================================================
-// 1) Notification à l'entreprise — email CRITIQUE (capture de la demande).
-$sentBusiness = smtp_send(
+// Un seul email : la demande détaillée vers l'entreprise (metallerie@).
+// La confirmation au visiteur est gérée par la notification à l'écran du site.
+$sent = smtp_send(
     SMTP_HOST,
     SMTP_PORT,
     SMTP_USER,
@@ -147,35 +131,16 @@ $sentBusiness = smtp_send(
     MAIL_FROM_NAME,
     MAIL_TO,
     $email,                 // Reply-To = l'email du visiteur (réponse directe possible)
-    $subjectBusiness,
-    $bodyBusiness,
-    $errBusiness
+    $subject,
+    $bodyHtml,
+    $errorMsg
 );
 
-if (!$sentBusiness) {
-    error_log('Iron Steel contact SMTP error (entreprise): ' . $errBusiness);
+if (!$sent) {
+    error_log('Iron Steel contact SMTP error: ' . $errorMsg);
     http_response_code(500);
     echo json_encode(['error' => "Erreur lors de l'envoi. Veuillez réessayer ou nous contacter par téléphone."]);
     exit;
-}
-
-// 2) Confirmation au visiteur — NON bloquant (la demande est déjà transmise).
-$sentVisitor = smtp_send(
-    SMTP_HOST,
-    SMTP_PORT,
-    SMTP_USER,
-    SMTP_PASS,
-    MAIL_FROM,
-    MAIL_FROM_NAME,
-    $email,                 // destinataire = le visiteur
-    MAIL_TO,                // Reply-To = l'entreprise
-    $subjectVisitor,
-    $bodyVisitor,
-    $errVisitor
-);
-
-if (!$sentVisitor) {
-    error_log('Iron Steel contact SMTP error (confirmation visiteur): ' . $errVisitor);
 }
 
 echo json_encode(['message' => 'Votre message a bien été envoyé.']);
